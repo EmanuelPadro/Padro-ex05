@@ -1,6 +1,9 @@
 package Package1;
 
-
+/*
+ *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  Copyright 2021 first_name last_name
+ */
 
 /*
 prompt user for 2 numbers
@@ -9,16 +12,6 @@ for 2 numbers given
 main will call functions to gather input which
 calls class and then main will cal output function
 output function with all desired calculations
-
-
-
-output
-What is the first number? 10
-What is the second number? 5
-10 + 5 = 15
-10 - 5 = 5
-10 * 5 = 50
-10 / 5 = 2
 */
 
 import java.util.Scanner;
@@ -45,16 +38,19 @@ public class Solution05 {
 
     public static Calculations GetNum(){
         Scanner Input = new Scanner(System.in);
-        System.out.println("What is your first number? ");
+        System.out.print("What is your first number? ");
         int Num1 = Input.nextInt();
-        System.out.println("What is your second number? ");
+        System.out.print("What is your second number? ");
         int Num2 = Input.nextInt();
 
         return new Calculations(Num1, Num2);
     }
 
     public static void Output(Calculations Results){
-        System.out.println(Results.Num1 + " " + Results.Num2 + " = " + Results.sum);
+        System.out.println(Results.Num1 + " + " + Results.Num2 + " = " + Results.sum);
+        System.out.println(Results.Num1 + " - " + Results.Num2 + " = " + Results.minus);
+        System.out.println(Results.Num1 + " * " + Results.Num2 + " = " + Results.mult);
+        System.out.println(Results.Num1 + " / " + Results.Num2 + " = " + Results.div);
     }
     public static void main(String[] args) {
         Calculations Results = GetNum();
